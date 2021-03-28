@@ -5,6 +5,7 @@
 using namespace std;
 
 #define int64 int64_t
+
 const int64 inf = 1e15;
 
 void dijkstra(const vector<vector<pair<int, int>>> &g, const int s, vector<int64> &d) {
