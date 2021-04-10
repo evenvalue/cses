@@ -11,10 +11,10 @@ int main() {
   int n;
   cin >> n;
   vector<vector<int>> g(n);
-  for (int i = 1; i < n; i++) {
-    int x;
-    cin >> x;
-    g[x - 1].push_back(i);
+  for (int x = 1; x < n; x++) {
+    int p;
+    cin >> p;
+    g[p - 1].push_back(x);
   }
   vector<int> sub(n, 1);
   function<int(int)> dfs = [&](const int x) {
