@@ -4,7 +4,7 @@ project(cses)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wshadow -Wformat=2 -Wfloat-equal -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover=all -fstack-protector")
 
-add_executable(1068 1068.cpp 1137.cpp)
+add_executable(1068 1068.cpp)
 add_executable(1069 1069.cpp)
 add_executable(1083 1083.cpp)
 add_executable(1094 1094.cpp)
