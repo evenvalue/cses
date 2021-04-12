@@ -69,17 +69,17 @@ int main() {
     g[x - 1].push_back(y - 1);
     g[y - 1].push_back(x - 1);
   }
-  vector<int> preorder;
-  function<void(int, int)> build_preorder = [&](const int x, const int p) {
-    a[x].l = preorder.size();
-    preorder.push_back(x);
+  int timer = 0;
+  function<void(int, int)> dfs = [&](const int x, const int p) {
+    a[x].l = timer;
+    timer++;
     for (const int &y : g[x]) {
       if (y == p) continue;
-      build_preorder(y, x);
+      dfs(y, x);
     }
-    a[x].r = (int)preorder.size() - 1;
+    a[x].r = timer - 1;
   };
-  build_preorder(0, -1);
+  dfs(0, -1);
   SegTree st(n);
   for (const node &x : a) {
     st.update(0, 0, n - 1, x.l, x.value);
