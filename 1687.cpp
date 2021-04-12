@@ -16,20 +16,20 @@ public:
     for (int i = 0; i < n; i++) {
       st[i][0] = p[i];
     }
-    for (int j = 1; j <= log; j++) {
-      for (int i = 0; i < n; i++) {
-        const int anc = st[i][j - 1];
-        st[i][j] = anc == -1 ? -1 : st[anc][j - 1];
+    for (int jump = 1; jump <= log; jump++) {
+      for (int x = 0; x < n; x++) {
+        const int anc = st[x][jump - 1];
+        st[x][jump] = (anc == -1 ? -1 : st[anc][jump - 1]);
       }
     }
   }
 
-  int get_anc(int x, const int up) {
+  int ancestor(int x, const int up) {
     if (1 << log < up) return -1;
-    for (int j = 0; j <= log; j++) {
+    for (int jump = 0; jump <= log; jump++) {
       if (x == -1) return -1;
-      if (up & (1 << j)) {
-        x = st[x][j];
+      if (up & (1 << jump)) {
+        x = st[x][jump];
       }
     }
     return x;
@@ -52,7 +52,7 @@ int main() {
   while (q--) {
     int x, k;
     cin >> x >> k;
-    int ans = t.get_anc(x - 1, k);
+    int ans = t.ancestor(x - 1, k);
     cout << (ans == -1 ? -1 : ans + 1) << "\n";
   }
 }
