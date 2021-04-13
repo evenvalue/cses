@@ -5,14 +5,12 @@ using namespace std;
 
 class TreeAnc {
   vector<vector<int>> st;
-  vector<int> start;
-  vector<int> finish;
+  const vector<int> start;
+  const vector<int> finish;
   int log;
 
 public:
-  explicit TreeAnc(const int n, const vector<int> &p, const vector<int> &s, const vector<int> &f) {
-    start = s;
-    finish = f;
+  explicit TreeAnc(const int n, const vector<int> &p, const vector<int> &s, const vector<int> &f) : start(s), finish(f) {
     log = 0;
     while (1 << log <= n) {
       log++;
@@ -29,11 +27,11 @@ public:
     }
   }
 
-  bool anc(const int x, const int y) {
+  bool anc(const int x, const int y) const {
     return (start[x] <= start[y]) and (finish[y] <= finish[x]);
   }
 
-  int lca(int x, const int y) {
+  int lca(int x, const int y) const {
     if (anc(x, y)) return x;
     if (anc(y, x)) return y;
     for (int j = log; j >= 0; j--) {
