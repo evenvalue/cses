@@ -46,15 +46,15 @@ public:
   }
 };
 
-struct node {
-  int value;
-  int l, r;
-};
-
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
   cout.tie(nullptr);
+
+  struct node {
+    int value;
+    int l, r;
+  };
 
   int n, q;
   cin >> n >> q;
