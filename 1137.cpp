@@ -5,11 +5,6 @@ using namespace std;
 
 #define int64 int64_t
 
-struct node {
-  int value;
-  int l, r;
-};
-
 class SegTree {
   vector<int64> t;
 
@@ -55,6 +50,11 @@ int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
   cout.tie(nullptr);
+
+  struct node {
+    int value;
+    int l, r;
+  };
 
   int n, q;
   cin >> n >> q;
