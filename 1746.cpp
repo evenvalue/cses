@@ -24,14 +24,14 @@ int main() {
     if (x == 0) {
       for (int j = 1; j <= m; j++) {
         for (int k : {j - 1, j, j + 1}) {
-          if (k >= 1 && k <= m) {
+          if (1 <= k and k <= m) {
             (dp[i][j] += dp[i - 1][k]) %= mod;
           }
         }
       }
     } else {
       for (int k : {x - 1, x, x + 1}) {
-        if (k >= 1 && k <= m) {
+        if (1 <= k and k <= m) {
           (dp[i][x] += dp[i - 1][k]) %= mod;
         }
       }
