@@ -7,7 +7,7 @@ int main() {
   cin.tie(nullptr);
   cout.tie(nullptr);
 
-  const int mod = 1e9 + 7;
+  const int kMod = 1e9 + 7;
 
   int n, m;
   cin >> n >> m;
@@ -25,21 +25,23 @@ int main() {
       for (int j = 1; j <= m; j++) {
         for (int k : {j - 1, j, j + 1}) {
           if (1 <= k and k <= m) {
-            (dp[i][j] += dp[i - 1][k]) %= mod;
+            dp[i][j] += dp[i - 1][k];
+            dp[i][j] %= kMod;
           }
         }
       }
     } else {
       for (int k : {x - 1, x, x + 1}) {
         if (1 <= k and k <= m) {
-          (dp[i][x] += dp[i - 1][k]) %= mod;
+          dp[i][x] += dp[i - 1][k];
+          dp[i][x] %= kMod;
         }
       }
     }
   }
   int ans = 0;
   for (int j = 1; j <= m; j++) {
-    (ans += dp[n - 1][j]) %= mod;
+    (ans += dp[n - 1][j]) %= kMod;
   }
   cout << ans << "\n";
 }
