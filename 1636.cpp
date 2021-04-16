@@ -18,7 +18,7 @@ int main() {
   for (int &coin : coins) {
     cin >> coin;
   }
-  vector<vector<int>> dp(n, vector<int>(req + 1, 0));
+  vector<vector<int>> dp(n, vector<int>(req + 1));
   for (int x = 0; x <= req; x++) {
     dp[0][x] = (x % coins[0] == 0);
   }
@@ -28,9 +28,8 @@ int main() {
   for (int c = 1; c < n; c++) {
     for (int x = 1; x <= req; x++) {
       dp[c][x] = dp[c - 1][x];
-      const int prev = x - coins[c];
-      if (prev < 0) continue;
-      dp[c][x] += dp[c][prev];
+      if (x < coins[c]) continue;
+      dp[c][x] += dp[c][x - coins[c]];
       dp[c][x] %= mod;
     }
   }
