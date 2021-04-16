@@ -7,8 +7,8 @@ int main() {
   cin.tie(nullptr);
   cout.tie(nullptr);
 
-  int n, money;
-  cin >> n >> money;
+  int n, budget;
+  cin >> n >> budget;
   vector<int> cost(n), page(n);
   for (int &price : cost) {
     cin >> price;
@@ -16,14 +16,13 @@ int main() {
   for (int &book : page) {
     cin >> book;
   }
-  vector<vector<int>> dp(n + 1, vector<int>(money + 1));
+  vector<vector<int>> dp(n + 1, vector<int>(budget + 1));
   for (int b = 1; b <= n; b++) {
-    for (int x = 1; x <= money; x++) {
+    for (int x = 1; x <= budget; x++) {
       dp[b][x] = dp[b - 1][x];
-      const int prev = x - cost[b - 1];
-      if (prev < 0) continue;
-      dp[b][x] = max(dp[b][x], dp[b - 1][prev] + page[b - 1]);
+      if (x < cost[b - 1]) continue;
+      dp[b][x] = max(dp[b][x], dp[b - 1][x - cost[b - 1]] + page[b - 1]);
     }
   }
-  cout << dp[n][money] << "\n";
+  cout << dp[n][budget] << "\n";
 }
