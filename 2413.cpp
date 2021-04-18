@@ -9,14 +9,15 @@ int main() {
   cin.tie(nullptr);
   cout.tie(nullptr);
 
-  const int mod = 1e9 + 7;
-  const int N = 1e6 + 5;
+  const int kMod = 1e9 + 7;
+  const int kMaxN = 1e6;
 
-  vector<vector<int64>> dp(N, vector<int64>(2));
-  dp[1][0] = dp[1][1] = 1;
-  for (int h = 2; h < N; h++) {
-    (dp[h][0] = 4 * dp[h - 1][0] + dp[h - 1][1]) %= mod;
-    (dp[h][1] = 2 * dp[h - 1][1] + dp[h - 1][0]) %= mod;
+  vector<int64> chop(kMaxN + 1);
+  vector<int64> join(kMaxN + 1);
+  chop[1] = join[1] = 1;
+  for (int h = 2; h <= kMaxN; h++) {
+    chop[h] = (4 * chop[h - 1] + join[h - 1]) % kMod;
+    join[h] = (2 * join[h - 1] + chop[h - 1]) % kMod;
   }
 
   int t;
@@ -24,6 +25,6 @@ int main() {
   while (t--) {
     int n;
     cin >> n;
-    cout << (dp[n][0] + dp[n][1]) % mod << "\n";
+    cout << (chop[n] + join[n]) % kMod << "\n";
   }
 }
