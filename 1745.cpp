@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -15,22 +16,16 @@ int main() {
     cin >> coin;
     max_sum += coin;
   }
-  vector<vector<bool>> dp(max_sum + 1, vector<bool>(n + 1, false));
-  dp[0][0] = true;
-  for (int x = 0; x <= max_sum; x++) {
-    for (int c = 1; c <= n; c++) {
-      dp[x][c] = dp[x][c - 1];
-      if (x < coins[c - 1]) continue;
-      dp[x][c] = dp[x][c] or dp[x - coins[c - 1]][c - 1];
+  vector<bool> can(max_sum + 1, false);
+  can[0] = true;
+  for (const int coin : coins) {
+    for (int i = max_sum; i >= coin; i--) {
+      can[i] = can[i] or can[i - coin];
     }
   }
-  int ans = 0;
-  for (int sum = 1; sum <= max_sum; sum++) {
-    ans += (dp[sum][n]);
-  }
-  cout << ans << "\n";
-  for (int sum = 1; sum <= max_sum; sum++) {
-    if (not dp[sum][n]) continue;
-    cout << sum << " ";
+  cout << count(can.begin(), can.end(), true) - 1 << "\n";
+  for (int i = 1; i <= max_sum; i++) {
+    if (not can[i]) continue;
+    cout << i << " ";
   }
 }
