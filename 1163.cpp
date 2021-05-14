@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iterator>
 #include <set>
-#include <vector>
 using namespace std;
 
 int main() {
@@ -16,10 +15,10 @@ int main() {
   while (m--) {
     int new_light;
     cin >> new_light;
-    auto it = lights.insert(new_light).first;
-    diff.erase(diff.find(*next(it) - *prev(it)));
-    diff.insert(*it - *prev(it));
-    diff.insert(*next(it) - *it);
+    auto lamp = lights.insert(new_light).first;
+    diff.erase(diff.find(*next(lamp) - *prev(lamp)));
+    diff.insert(*lamp - *prev(lamp));
+    diff.insert(*next(lamp) - *lamp);
     cout << *(prev(diff.end())) << " ";
   }
 }
