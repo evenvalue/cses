@@ -6,14 +6,14 @@ using namespace std;
 
 const int kMod = 1e9 + 7;
 
+template<int n>
 struct matrix {
-  int n;
   vector<vector<int>> a;
 
-  explicit matrix(const int n) : n(n), a(n, vector<int>(n)) {}
+  explicit matrix() : a(n, vector<int>(n)) {}
 
   matrix operator*(const matrix &other) const {
-    matrix ret(n);
+    matrix ret;
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < n; j++) {
         for (int k = 0; k < n; k++) {
@@ -25,15 +25,18 @@ struct matrix {
   }
 };
 
-matrix binpow(matrix &m, int64 pow) {
-  matrix product(2);
-  product.a = {{1, 0}, {0, 1}};
-  while (pow) {
-    if (pow & 1) {
+template<int n>
+matrix<n> binpow(matrix<n> m, int64 exp) {
+  matrix<n> product;
+  for (int i = 0; i < n; i++) {
+    product.a[i][i] = 1;
+  }
+  while (exp) {
+    if (exp & 1) {
       product = product * m;
     }
     m = m * m;
-    pow /= 2;
+    exp /= 2;
   }
   return product;
 }
@@ -45,7 +48,7 @@ int main() {
 
   int64 n;
   cin >> n;
-  matrix m(2);
-  m.a = {{0, 1}, {1, 1,}};
-  cout << binpow(m, n).a[1][0] << "\n";
+  matrix<2> m;
+  m.a = {{0, 1}, {1, 1}};
+  cout << binpow<2>(m, n).a[1][0] << "\n";
 }
