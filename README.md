@@ -2,6 +2,21 @@
 >evenvalue's accepted solutions for the [CSES problemset](https://cses.fi/problemset)
 
 ---
+## Table of Contents
+
+- [Introductory Problems](https://github.com/evenvalue/cses#introductory-problems)
+- [Sorting and Searching](https://github.com/evenvalue/cses#sorting-and-searching)
+- [Dynamic Programming](https://github.com/evenvalue/cses#dynamic-programming)
+- [Graph Algorithms](https://github.com/evenvalue/cses#graph-algorithms)
+- [Range Queries](https://github.com/evenvalue/cses#range-queries)
+- [Tree Algorithms](https://github.com/evenvalue/cses#tree-algorithms)
+- [Mathematics](https://github.com/evenvalue/cses#mathematics)
+- [String Algorithms](https://github.com/evenvalue/cses#string-algorithms)
+- [Geometry](https://github.com/evenvalue/cses#geometry)
+- [Advanced Techniques](https://github.com/evenvalue/cses#advanced-techniques)
+- [Additional Problems](https://github.com/evenvalue/cses#additional-problems)
+
+---
 ## INTRODUCTORY PROBLEMS
 1. [1068 - Weird Algorithm](https://github.com/evenvalue/cses/blob/master/1068.cpp)
 1. [1083 - Missing Number](https://github.com/evenvalue/cses/blob/master/1083.cpp)
