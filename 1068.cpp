@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define int64 int64_t
+using int64 = int64_t;
 
 int main() {
   ios::sync_with_stdio(false);
@@ -11,7 +11,7 @@ int main() {
   int64 n;
   cin >> n;
   while (n != 1) {
-    cout << n << " ";
+    cout << n << ' ';
     if (n % 2 == 0) {
       n /= 2;
     } else {
@@ -19,5 +19,5 @@ int main() {
       n++;
     }
   }
-  cout << 1 << "\n";
+  cout << 1 << '\n';
 }
