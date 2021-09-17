@@ -17,7 +17,7 @@
 - [Additional Problems](https://github.com/evenvalue/cses#additional-problems)
 
 ---
-## INTRODUCTORY PROBLEMS
+## Introductory Problems
 1. [1068 - Weird Algorithm](https://github.com/evenvalue/cses/blob/master/1068.cpp)
 1. [1083 - Missing Number](https://github.com/evenvalue/cses/blob/master/1083.cpp)
 1. [1069 - Repetitions](https://github.com/evenvalue/cses/blob/master/1069.cpp)
