@@ -32,7 +32,7 @@
 1. [1755 - Palindrome Reorder](https://github.com/evenvalue/cses/blob/master/1755.cpp)
 1. [2205 - Gray Code](https://github.com/evenvalue/cses/blob/master/2205.cpp)
 1. [2165 - Tower of Hanoi](https://github.com/evenvalue/cses/blob/master/2165.cpp)
-1. 1622 - Creating Strings
+1. [1622 - Creating Strings](https://github.com/evenvalue/cses/blob/master/1622.cpp)
 1. [1623 - Apple Division](https://github.com/evenvalue/cses/blob/master/1623.cpp)
 1. [1624 - Chessboard and Queens](https://github.com/evenvalue/cses/blob/master/1624.cpp)
 1. 2431 - Digit Queries
