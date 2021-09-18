@@ -115,7 +115,7 @@
 1. [1680 - Longest Flight Route](https://github.com/evenvalue/cses/blob/master/1680.cpp)
 1. [1681 - Game Routes](https://github.com/evenvalue/cses/blob/master/1681.cpp)
 1. [1202 - Investigation](https://github.com/evenvalue/cses/blob/master/1202.cpp)
-1. 1750 - Planets Queries I
+1. [1750 - Planets Queries I](https://github.com/evenvalue/cses/blob/master/1750.cpp)
 1. 1160 - Planets Queries II
 1. [1751 - Planets Cycles](https://github.com/evenvalue/cses/blob/master/1751.cpp)
 1. [1675 - Road Reparation](https://github.com/evenvalue/cses/blob/master/1675.cpp)
