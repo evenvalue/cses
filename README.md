@@ -65,7 +65,7 @@
 1. 1641 - Sum of Three Values
 1. 1642 - Sum of Four Values
 1. 1645 - Nearest Smaller Values
-1. 1660 - Subarray Sums I
+1. [1660 - Subarray Sums I](https://github.com/evenvalue/cses/blob/master/1660.cpp)
 1. 1661 - Subarray Sums II
 1. 1662 - Subarray Divisibility
 1. 2428 - Subarray Distinct Values
