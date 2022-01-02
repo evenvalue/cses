@@ -58,7 +58,7 @@
 1. 2163 - Josephus Problem II
 1. 2168 - Nested Ranges Check
 1. 2169 - Nested Ranges Count
-1. 1164 - Room Allocation
+1. [1164 - Room Allocation](https://github.com/evenvalue/cses/blob/master/1164.cpp)
 1. 1620 - Factory Machines
 1. 1630 - Tasks and Deadlines
 1. 1631 - Reading Books
