@@ -115,6 +115,7 @@ void solution() {
     future_free.push({out + 1, room}); //The room will become free only after the ith customer moves out.
     customers.pop(), free.pop(); //The customer has been assigned his room, so we pop from the heaps.
   }
+
   cout << *max_element(ans.begin(), ans.end()) << '\n';
   for (const int x : ans) {
     cout << x << ' ';
