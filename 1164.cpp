@@ -90,7 +90,7 @@ void solution() {
 
   min_heap<int> free; //holds the index of rooms that are free.
   min_heap<customer> customers; //holds the customers.
-  min_heap<pair<int, int>> future_free; //holds the rooms that will free in the future.
+  min_heap<pair<int, int>> future_free; //holds the rooms that will become free in the future.
 
   for (int i = 1; i <= n; i++) {
     free.push(i); //ith room is currently free at time 0.
