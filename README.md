@@ -144,7 +144,7 @@
 1. [1652 - Forest Queries](https://github.com/evenvalue/cses/blob/master/1652.cpp)
 1. [1143 - Hotel Queries](https://github.com/evenvalue/cses/blob/master/1143.cpp)
 1. [1749 - List Removals](https://github.com/evenvalue/cses/blob/master/1749.cpp)
-1. 1144 - Salary Queries
+1. [1144 - Salary Queries](https://github.com/evenvalue/cses/blob/master/1144.cpp)
 1. [2166 - Prefix Sum Queries](https://github.com/evenvalue/cses/blob/master/2166.cpp)
 1. 2206 - Pizzeria Queries
 1. [1190 - Subarray Sum Queries](https://github.com/evenvalue/cses/blob/master/1190.cpp)
