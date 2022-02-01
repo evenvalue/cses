@@ -146,7 +146,7 @@
 1. [1749 - List Removals](https://github.com/evenvalue/cses/blob/master/1749.cpp)
 1. [1144 - Salary Queries](https://github.com/evenvalue/cses/blob/master/1144.cpp)
 1. [2166 - Prefix Sum Queries](https://github.com/evenvalue/cses/blob/master/2166.cpp)
-1. 2206 - Pizzeria Queries
+1. [2206 - Pizzeria Queries](https://github.com/evenvalue/cses/blob/master/2206.cpp)
 1. [1190 - Subarray Sum Queries](https://github.com/evenvalue/cses/blob/master/1190.cpp)
 1. [1734 - Distinct Values Queries](https://github.com/evenvalue/cses/blob/master/1734.cpp)
 1. 2416 - Increasing Array Queries
