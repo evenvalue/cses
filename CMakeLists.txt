@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 project(cses)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wshadow -Wformat=2 -Wfloat-equal -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2")
 
 add_executable(1068 1068.cpp)
@@ -119,3 +119,4 @@ add_executable(2216 2216.cpp)
 add_executable(2217 2217.cpp)
 add_executable(2220 2220.cpp)
 add_executable(2413 2413.cpp)
+add_executable(2416 2416.cpp)
