@@ -151,7 +151,7 @@
 1. [1734 - Distinct Values Queries](https://github.com/evenvalue/cses/blob/master/1734.cpp)
 1. [2416 - Increasing Array Queries](https://github.com/evenvalue/cses/blob/master/2416.cpp)
 1. 1739 - Forest Queries II
-1. 1735 - Range Updates and Sums
+1. [1735 - Range Updates and Sums](https://github.com/evenvalue/cses/blob/master/1735.cpp)
 1. [1736 - Polynomial Queries](https://github.com/evenvalue/cses/blob/master/1736.cpp)
 1. 1737 - Range Queries and Copies
 
