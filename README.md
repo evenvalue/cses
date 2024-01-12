@@ -167,7 +167,7 @@
 1. [1136 - Counting Paths](https://github.com/evenvalue/cses/blob/master/1136.cpp)
 1. [1137 - Subtree Queries](https://github.com/evenvalue/cses/blob/master/1137.cpp)
 1. [1138 - Path Queries](https://github.com/evenvalue/cses/blob/master/1138.cpp)
-1. 2134 - Path Queries II
+1. [2134 - Path Queries II](https://github.com/evenvalue/cses/blob/master/2134.cpp)
 1. [1139 - Distinct Colors](https://github.com/evenvalue/cses/blob/master/1139.cpp)
 1. [2079 - Finding a Centroid](https://github.com/evenvalue/cses/blob/master/2079.cpp)
 1. 2080 - Fixed-Length Paths I
