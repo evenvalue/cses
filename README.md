@@ -170,7 +170,7 @@
 1. [2134 - Path Queries II](https://github.com/evenvalue/cses/blob/master/2134.cpp)
 1. [1139 - Distinct Colors](https://github.com/evenvalue/cses/blob/master/1139.cpp)
 1. [2079 - Finding a Centroid](https://github.com/evenvalue/cses/blob/master/2079.cpp)
-1. 2080 - Fixed-Length Paths I
+1. [2080 - Fixed-Length Paths I](https://github.com/evenvalue/cses/blob/master/2080.cpp)
 1. 2081 - Fixed-Length Paths II
 
 ## Mathematics
