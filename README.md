@@ -287,7 +287,7 @@
 1. 1748 - Increasing Subsequence II
 1. 1149 - String Removals
 1. 1188 - Bit Inversions
-1. 2419 - Xor Pyramid
+1. [2419 - Xor Pyramid](https://github.com/evenvalue/cses/blob/master/2419.cpp)
 1. 1086 - Writing Numbers
 1. 1113 - String Transform
 1. 2427 - Letter Pair Move Game
