@@ -255,7 +255,7 @@
 1. 2112 - One Bit Positions
 1. 2113 - Signal Processing
 1. 2101 - New Roads Queries
-1. 2133 - Dynamic Connectivity
+1. [2133 - Dynamic Connectivity](https://github.com/evenvalue/cses/blob/master/2133.cpp)
 1. 2121 - Parcel Delivery
 1. 2129 - Task Assignment
 1. 2130 - Distinct Routes II
