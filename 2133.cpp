@@ -51,8 +51,6 @@ class SegTree {
   const int n;
   vector<vector<array<int, 3>>> edges;
 
-  dsu d;
-
   void add_edge(const int x, const int l, const int r, const int ql, const int qr, const int a, const int b) {
     if (ql <= l and r <= qr) {
       edges[x].push_back({a, b, -1});
@@ -68,7 +66,7 @@ class SegTree {
     }
   }
 
-  void calculate(const int x, const int l, const int r, vector<int> &ans) {
+  void calculate(const int x, const int l, const int r, dsu &d, vector<int> &ans) {
     for (auto &[a, b, c] : edges[x]) {
       c = d.unite(a, b);
     }
@@ -77,8 +75,8 @@ class SegTree {
     } else {
       const int mid = (l + r) / 2;
       const int y = 2 * (mid - l + 1) + x;
-      calculate(x + 1, l, mid, ans);
-      calculate(y, mid + 1, r, ans);
+      calculate(x + 1, l, mid, d, ans);
+      calculate(y, mid + 1, r, d, ans);
     }
     for (int i = edges[x].size() - 1; i >= 0; i--) {
       d.rollback(edges[x][i][2]);
@@ -86,15 +84,15 @@ class SegTree {
   }
 
 public:
-  SegTree(const int n, const int nodes) : n(n), edges(2 * n - 1), d(nodes) {}
+  SegTree(const int n) : n(n), edges(2 * n - 1) {}
 
   void add_edge(const int x, const int y, const int l, const int r) {
     add_edge(0, 0, n - 1, l, r, x, y);
   }
 
-  vector<int> calculate() {
+  vector<int> calculate(dsu &d) {
     vector<int> ans;
-    calculate(0, 0, n - 1, ans);
+    calculate(0, 0, n - 1, d, ans);
     return ans;
   }
 };
@@ -113,12 +111,12 @@ inline void solution() {
 
   vector<edge> edges;
 
-  map<pair<int, int>, int> mp;
+  map<pair<int, int>, int> idx;
   for (int i = 0; i < m; i++) {
     const int x = read<int>() - 1;
     const int y = read<int>() - 1;
     edges.push_back({x, y, 0});
-    mp[{x, y}] = mp[{y, x}] = edges.size() - 1;
+    idx[{x, y}] = idx[{y, x}] = edges.size() - 1;
     edges.back().l = 0;
     edges.back().r = k + 1;
   }
@@ -129,22 +127,24 @@ inline void solution() {
     const int y = read<int>() - 1;
     if (t == 1) {
       edges.push_back({x, y, i});
-      mp[{x, y}] = mp[{y, x}] = edges.size() - 1;
+      idx[{x, y}] = idx[{y, x}] = edges.size() - 1;
       edges.back().l = i;
       edges.back().r = k + 1;
     } else {
-      edges[mp[{x, y}]].r = i - 1;
+      edges[idx[{x, y}]].r = i - 1;
     }
   }
 
   const int kTime = k + 1;
 
-  SegTree st(kTime, n);
+  SegTree st(kTime);
   for (const auto &[x, y, l, r] : edges) {
     st.add_edge(x, y, l, r);
   }
 
-  const auto ans = st.calculate();
+  dsu d(n);
+
+  const auto ans = st.calculate(d);
   for (int i = 0; i <= k; i++) {
     cout << ans[i] << ' ';
   }
