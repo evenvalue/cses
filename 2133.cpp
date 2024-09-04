@@ -104,21 +104,26 @@ struct edge {
   int r;
 };
 
-inline void solution() {
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
   const int n = read<int>();
   const int m = read<int>();
   const int k = read<int>();
 
   vector<edge> edges;
-
   map<pair<int, int>, int> idx;
+
+  auto add_edge = [&](const int x, const int y, const int t) {
+    edges.push_back({x, y, t, k + 1});
+    idx[{x, y}] = idx[{y, x}] = edges.size() - 1;
+  };
+
   for (int i = 0; i < m; i++) {
     const int x = read<int>() - 1;
     const int y = read<int>() - 1;
-    edges.push_back({x, y, 0});
-    idx[{x, y}] = idx[{y, x}] = edges.size() - 1;
-    edges.back().l = 0;
-    edges.back().r = k + 1;
+    add_edge(x, y, 0);
   }
 
   for (int i = 1; i <= k; i++) {
@@ -126,10 +131,7 @@ inline void solution() {
     const int x = read<int>() - 1;
     const int y = read<int>() - 1;
     if (t == 1) {
-      edges.push_back({x, y, i});
-      idx[{x, y}] = idx[{y, x}] = edges.size() - 1;
-      edges.back().l = i;
-      edges.back().r = k + 1;
+      add_edge(x, y, i);
     } else {
       edges[idx[{x, y}]].r = i - 1;
     }
@@ -149,11 +151,4 @@ inline void solution() {
     cout << ans[i] << ' ';
   }
   cout << '\n';
-}
-
-int32_t main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(nullptr);
-
-  solution();
 }
