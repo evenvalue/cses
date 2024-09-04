@@ -145,10 +145,8 @@ int main() {
   }
 
   dsu d(n);
-
-  const auto ans = st.calculate(d);
-  for (int i = 0; i <= k; i++) {
-    cout << ans[i] << ' ';
+  for (const int ans : st.calculate(d)) {
+    cout << ans << ' ';
   }
   cout << '\n';
 }
