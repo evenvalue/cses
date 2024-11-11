@@ -129,7 +129,7 @@
 1. 1693 - Teleporters Path
 1. [1690 - Hamiltonian Flights](https://github.com/evenvalue/cses/blob/master/1690.cpp)
 1. 1689 - Knight's Tour
-1. 1694 - Download Speed
+1. [1694 - Download Speed](https://github.com/evenvalue/cses/blob/master/1694.cpp)
 1. 1695 - Police Chase
 1. 1696 - School Dance
 1. 1711 - Distinct Routes
