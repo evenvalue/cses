@@ -131,7 +131,7 @@
 1. 1689 - Knight's Tour
 1. [1694 - Download Speed](https://github.com/evenvalue/cses/blob/master/1694.cpp)
 1. [1695 - Police Chase](https://github.com/evenvalue/cses/blob/master/1695.cpp)
-1. 1696 - School Dance
+1. [1696 - School Dance](https://github.com/evenvalue/cses/blob/master/1696.cpp)
 1. 1711 - Distinct Routes
 
 ## Range Queries
