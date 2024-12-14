@@ -35,7 +35,7 @@
 1. [1622 - Creating Strings](https://github.com/evenvalue/cses/blob/master/1622.cpp)
 1. [1623 - Apple Division](https://github.com/evenvalue/cses/blob/master/1623.cpp)
 1. [1624 - Chessboard and Queens](https://github.com/evenvalue/cses/blob/master/1624.cpp)
-1. [2431 - Digit Queries](https://github.com/evenvalue/cses/blob/master/2431.cpp
+1. [2431 - Digit Queries](https://github.com/evenvalue/cses/blob/master/2431.cpp) 
 1. 1625 - Grid Paths
 
 ## Sorting and Searching
